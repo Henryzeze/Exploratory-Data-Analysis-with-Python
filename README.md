@@ -1,7 +1,8 @@
 # Exploratory-Data-Analysis-with-Python
 
+![](exploratory-analysis.jpg)
 
-**Note:** ***This is a followup on my github repository "Data Wrangling with Python"***
+**Note:** ***This is a followup on my github repository ["Data Wrangling with Python"](https://github.com/Henryzeze/Data-Wrangling-with-Python)***
 
 ## Introduction
 
