@@ -80,7 +80,7 @@ This process focuses on conducting a descriptive statistical analysis of the dat
 
 This process involves utilizing the "value_counts" method to analyze the distribution of different units within a specific characteristic or variable, such as 'drive-wheels.' It is a useful technique for understanding the frequency or count of each unique value in a categorical column.
 
-1[](counts.JPG)
+![](counts.JPG)
 
 ### Basics of Grouping
 
