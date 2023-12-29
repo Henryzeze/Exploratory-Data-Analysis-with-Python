@@ -81,3 +81,69 @@ This process focuses on conducting a descriptive statistical analysis of the dat
 This process involves utilizing the "value_counts" method to analyze the distribution of different units within a specific characteristic or variable, such as 'drive-wheels.' It is a useful technique for understanding the frequency or count of each unique value in a categorical column.
 
 1[](counts.JPG)
+
+### Basics of Grouping
+
+This process involves using the "groupby" method in pandas to group data based on specific categories or variables and then performing analysis within those groups.
+
+Initially, the data is grouped by a certain variable, and calculations like finding averages or other aggregate functions are applied. For instance, if you want to determine the average price of different types of drive wheels, you can group the data by 'drive-wheels' and calculate the mean price for each category.
+
+Grouping can also be performed based on multiple variables simultaneously. By combining 'drive-wheels' and 'body-style', for instance, you create unique groups representing different combinations of these variables.
+
+The grouped data is then transformed into a pivot table, resembling an Excel spreadsheet. This pivot table arrangement helps in visualizing relationships between variables. For example, converting 'drive-wheels' into rows and 'body-style' into columns allows us to understand how the price relates to these variables.
+
+![](group.JPG)
+
+Finally, a heatmap is used to graphically represent the relationship between 'Body Style vs Price'. The color shading on the heatmap indicates the price concerning 'drive-wheel' and 'body-style', allowing for an intuitive visualization of their correlation.
+
+![](heatmap.png)
+
+### Correlation and Causation
+
+This process deals with understanding the correlation and causation between variables.
+
+**Correlation** signifies the degree of interdependence between variables, whereas **causation** indicates the cause-and-effect relationship between two variables. It's essential to differentiate between them as correlation doesn't imply causation. Establishing causation might require independent experimentation, making it more complex than determining correlation.
+
+Pearson Correlation measures the linear dependence between two variables, giving a coefficient value between -1 and 1:
+
+- -1: Perfect negative linear correlation.
+- 0: No linear correlation, suggesting no effect on each other.
+- 1: Perfect positive linear correlation.
+
+The Pearson Correlation is computed using the "corr" function, evaluating the 'int64' or 'float64' variables.
+
+![](corr1.JPG)
+
+The **p-value** assesses the statistical significance of the correlation between variables. Typically, a significance level of 0.05 is chosen, indicating a 95% confidence level that the correlation between variables is significant. Interpretations based on p-values:
+
+- 0.001: Strong evidence of significant correlation.
+- 0.05: Moderate evidence of significant correlation.
+- 0.1: Weak evidence of significant correlation.
+- 0.1 or higher: Indicates no evidence of significant correlation.
+
+The "stats" module in the "scipy" library is used to obtain this statistical information.
+
+The Pearson Correlation Coefficient and p values where calculated for various variables vs price.
+
+![](cal.JPG)
+
+
+## Conclusion
+
+After analyzing the data, we've identified crucial variables that significantly impact predicting car prices. We've categorized these variables into two groups:
+
+**Continuous numerical variables**:
+
+- Length
+- Width
+- Curb-weight
+- Engine-size
+- Horsepower
+- City-mpg
+- Highway-mpg
+- Wheel-base
+- Bore
+
+**Categorical variables**:
+
+- Drive-wheels
